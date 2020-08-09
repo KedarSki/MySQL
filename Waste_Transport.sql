@@ -98,7 +98,22 @@ insert into loader2(id, firstName, surname)
 	(5, "Charles", "Roberts"),
 	(6, "Henry", "Redford");
 
-	insert into customers (id, companyName, ownerName, ownerSurname, phoneNumber, emailAdress, streetName, streetNumber, postCode)
-		values(1, "The Fish Club", "James", "Wilkinson", "+447785689875", "email@gmail.com", "St. John's Hill", "189", "SW10 7NJ"),
-		(2, "Company Club", "Conor", "McGregor", "+447888888", "email2@gmail.com", "Napier Road", "12", "NW10 5XH"),
-		(3, "N/A", "Shoen", "O'Conor", "+447787878787", "email2@gmail.com", "Archway Road", "155", "N2 5JK");
+insert into customers (id, companyName, ownerName, ownerSurname, phoneNumber, emailAdress, streetName, streetNumber, postCode)
+	values(1, "The Fish Club", "James", "Wilkinson", "+447785689875", "email@gmail.com", "St. John's Hill", "189", "SW10 7NJ"),
+	(2, "Company Club", "Conor", "McGregor", "+447888888", "email2@gmail.com", "Napier Road", "12", "NW10 5XH"),
+	(3, "N/A", "Shoen", "O'Conor", "+447787878787", "email2@gmail.com", "Archway Road", "155", "N2 5JK");
+		
+insert into area (id, customerId, area, city, postCode)
+    	values (1, 1, "Clapham", "London", "SW10"),
+    	(2,3, "Archway", "London", "N2"),
+    	(3,2, "Kensal Green", "London", "NW10");
+
+insert into team (id, driverId, loader1Id, loader2Id)
+	values (1, 1, 4, 5),
+	(2, 2, 2, 1),
+	(3, 3, 3, 6);
+
+insert into driveOut (id, teamId)
+	values (1, 3),
+	(2, 2),
+	(3, 1);
